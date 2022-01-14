@@ -1,0 +1,28 @@
+$main-color: #000;
+$sub-color: #ccc;
+.flx {
+  display: flex;
+}
+.flx-btw {
+  justify-content: space-between;
+}
+.flx-center {
+  justify-content: center;
+}
+.flx-wrap {
+  flex-wrap: wrap;
+}
+.al-center {
+  align-items: center;
+}
+a {
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0, 8;
+  }
+}
+.btn {
+  display: block;
+  box-sizing: border-box;
+}

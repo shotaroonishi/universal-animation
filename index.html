@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="section">
+        <p>↓スクロール↓</p>
+      </div>
+      <div class="section">
+        <p>↓スクロール↓</p>
+      </div>
+      <div class="section">
+        <p>↓スクロール↓</p>
+      </div>
+      <div class="section">
+        <p>↓スクロール↓</p>
+      </div>
+      <div class="canvas-cover" id="canvas-cover">
+        <div id="canvas-container" class="canvas-container"></div>
+      </div>
+      <div id="gauge-container" class="gauge-container">
+        <p class="press-count">
+          デバック用<span id="press-gauge">0</span><span>%</span>
+        </p>
+        <div id="prog-bar" class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <input type="button" value="連打" id="up" class="click" />
+        <input
+          type="button"
+          value="リフレッシュ"
+          id="refresh"
+          class="refresh button-disabled"
+        />
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.15.0/matter.min.js"></script>
+    <!-- <script src="js/matter.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

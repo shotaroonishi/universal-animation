@@ -1,0 +1,24 @@
+{
+  "name": "gulp_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 11",
+    "Android >= 4"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "7.1.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "node-sass": "^6.0.1",
+    "sass": "^1.37.2",
+    "yarn": "^1.22.11"
+  }
+}
