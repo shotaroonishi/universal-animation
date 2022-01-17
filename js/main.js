@@ -95,9 +95,9 @@ for (var i = 0; i < items; i++) {
   World.add(engine.world, [
     Bodies.rectangle(x, y, 100, 145, {
       // density: 0.0005, // 密度: 単位面積あたりの質量
-			// frictionAir: 0.06, // 空気抵抗(空気摩擦)
-			restitution: 0.8, // 弾力性
-			// friction: 0.01, // 本体の摩擦
+      // frictionAir: 0.06, // 空気抵抗(空気摩擦)
+      restitution: 0.8, // 弾力性
+      // friction: 0.01, // 本体の摩擦
       //長方形を追加する
       render: {
         sprite: {
@@ -124,9 +124,8 @@ up.onclick = () => {
     bar.style.width = gauge + "%";
   } else {
     console.log("7をふらす");
-    Engine.run(engine);
-    // canvasContainer.classList.add("is-active");
-    // canvasContainer.classList.remove("is-remove");
+    Matter.Runner.run(engine);
+    // Engine.run(engine);//7をふらす処理
     up.classList.add("button-disabled");
     refresh.classList.remove("button-disabled");
     up.disabled = true;
@@ -161,4 +160,5 @@ refresh.onclick = () => {
   bar.style.width = 0 + "%";
   gauge = 0;
   up.disabled = false;
+  Matter.Engine.clear(engine);
 };
