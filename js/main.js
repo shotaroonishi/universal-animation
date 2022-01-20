@@ -173,3 +173,10 @@ $clear.addEventListener("click", init);
 
 // 初期化
 init();
+
+/**
+ * タッチ操作での拡大縮小禁止
+ */
+function no_scaling() {
+  document.addEventListener("touchmove", mobile_no_scroll, { passive: false });
+}
