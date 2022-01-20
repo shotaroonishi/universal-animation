@@ -33,12 +33,18 @@ const render = Matter.Render.create({
   },
 });
 
-//マウス操作
+// create runner
+const runner = Matter.Runner.create();
+Matter.Runner.run(runner, engine);
+
+// add mouse control
+const mouse = Matter.Mouse.create(render.canvas);
 const mouseConstraint = Matter.MouseConstraint.create(engine, {
-  element: container, //マウス操作を感知する要素を指定（DEMOでは生成したcanvasを指定）
+  mouse: mouse,
   constraint: {
+    stiffness: 0.2,
     render: {
-      strokeStyle: "rgba(0, 0, 0, 0)", //マウス操作の表示を隠す
+      visible: false,
     },
   },
 });
@@ -71,11 +77,8 @@ mouseConstraint.mouse.element.addEventListener("touchend", (event) => {
   }
 });
 
-World.add(world, mouseConstraint);
-
-// create runner
-const runner = Matter.Runner.create();
-Matter.Runner.run(runner, engine);
+// keep the mouse in sync with rendering
+render.mouse = mouse;
 
 // 初期化
 const init = () => {
@@ -97,6 +100,8 @@ const init = () => {
       },
     }),
   ]);
+  //マウス操作を登録
+  Matter.Composite.add(world, mouseConstraint);
 };
 
 //ランダムな値を作る
