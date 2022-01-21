@@ -166,7 +166,9 @@ let time = 100;
 const downTime = setInterval(downGauge, time);
 const $add = document.getElementById("up");
 $add.addEventListener("click", add);
-
+function no_scaling() {
+  document.addEventListener("touchmove", mobile_no_scroll, { passive: false });
+}
 // クリア
 const $clear = document.getElementById("refresh");
 $clear.addEventListener("click", init);
@@ -177,6 +179,3 @@ init();
 /**
  * タッチ操作での拡大縮小禁止
  */
-function no_scaling() {
-  document.addEventListener("touchmove", mobile_no_scroll, { passive: false });
-}

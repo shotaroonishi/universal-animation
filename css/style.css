@@ -81,6 +81,11 @@ a:hover {
           user-select: none;
 }
 
+html {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
 .container {
   position: relative;
   width: 100%;

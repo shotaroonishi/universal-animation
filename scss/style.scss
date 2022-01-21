@@ -30,7 +30,9 @@
     user-select: none;
   }
 }
-
+html {
+  touch-action: manipulation;
+}
 .container {
   position: relative;
   width: 100%;
