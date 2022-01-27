@@ -144,12 +144,13 @@ const add = () => {
       ]);
     }
   }
+  console.log(gauge);
 };
 
 //クリックしないとゲージを減らず
 const downGauge = function () {
   if (gauge < 100 && gauge > 0) {
-    gauge = gauge - 6; //3%減らす
+    gauge = gauge - 9; //3%減らす
     bar.style.width = gauge + "%";
     pressGauge.innerHTML = gauge;
   }
