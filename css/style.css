@@ -64,6 +64,7 @@ a:hover {
   font-size: 24px;
   font-weight: bold;
   display: block;
+  pointer-events: none;
 }
 .click:hover {
   position: 0.8;

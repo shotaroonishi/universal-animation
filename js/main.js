@@ -127,6 +127,7 @@ const add = () => {
     console.log("7をふらす");
     up.classList.add("button-disabled");
     refresh.classList.remove("button-disabled");
+    // up.remove();
     up.disabled = true;
     for (let i = 0; i < items; i++) {
       let x = getRandomParameter(width, 0);
