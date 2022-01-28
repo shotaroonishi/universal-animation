@@ -89,7 +89,7 @@ const init = () => {
 
   bar.style.width = 0 + "%";
   gauge = 0;
-  up.disabled = false;
+  // up.disabled = false;
   Matter.Composite.clear(world);
   // 床
   Matter.Composite.add(world, [
@@ -130,7 +130,7 @@ const add = () => {
     console.log("7をふらす");
     up.classList.add("button-disabled");
     refresh.classList.remove("button-disabled");
-    up_wrap.classList.add("is-active");
+    // up_wrap.classList.add("is-active");
     // up.remove();
     // up.disabled = true;
     for (let i = 0; i < items; i++) {
