@@ -214,6 +214,7 @@ html {
   top: 0;
   width: 250px;
   height: 80px;
+  background: #000;
 }
 
 .is-active {
