@@ -205,6 +205,7 @@ html {
   position: relative;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
+  z-index: 1;
 }
 .up__wrap .up__cover {
   -ms-touch-action: manipulation;
@@ -218,7 +219,8 @@ html {
   top: 0;
   width: 250px;
   height: 80px;
-  background: blue;
+  background: green;
+  z-index: 100;
 }
 
 .is-active {
