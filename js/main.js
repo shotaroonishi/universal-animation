@@ -20,7 +20,7 @@ let width = window.innerWidth; //windowの幅
 let height = document.body.offsetHeight - gaugeContainerHeight; //windowの高さからフッターの高さをひく
 let items = 7; //itemの数
 var container = document.getElementById("canvas-container");
-
+const up_wrap = document.querySelector(".up__cover");
 // create renderer
 const render = Matter.Render.create({
   element: container,
@@ -85,6 +85,8 @@ const init = () => {
   // 削除
   Matter.Composite.clear(world);
   up.classList.remove("button-disabled");
+  up_wrap.classList.remove("is-active");
+
   bar.style.width = 0 + "%";
   gauge = 0;
   up.disabled = false;
@@ -115,18 +117,20 @@ const bar = document.querySelectorAll("#prog-bar > .progress-bar")[0];
 const up = document.getElementById("up");
 const refresh = document.querySelector("#refresh");
 const pressGauge = document.getElementById("press-gauge");
+
 let gauge = 0;
 
 // 追加
 const add = () => {
   if (gauge < 100) {
-    gauge = gauge + 17;
+    gauge = gauge + 15;
     bar.style.width = gauge + "%";
   } else {
     Matter.Render.run(render);
     console.log("7をふらす");
     up.classList.add("button-disabled");
     refresh.classList.remove("button-disabled");
+    up_wrap.classList.add("is-active");
     // up.remove();
     up.disabled = true;
     for (let i = 0; i < items; i++) {
@@ -151,7 +155,7 @@ const add = () => {
 //クリックしないとゲージを減らず
 const downGauge = function () {
   if (gauge < 100 && gauge > 0) {
-    gauge = gauge - 9; //3%減らす
+    gauge = gauge - 8; //3%減らす
     bar.style.width = gauge + "%";
     pressGauge.innerHTML = gauge;
   }
@@ -177,7 +181,3 @@ $clear.addEventListener("click", init);
 
 // 初期化
 init();
-
-/**
- * タッチ操作での拡大縮小禁止
- */
