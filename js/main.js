@@ -132,7 +132,7 @@ const add = () => {
     refresh.classList.remove("button-disabled");
     up_wrap.classList.add("is-active");
     // up.remove();
-    up.disabled = true;
+    // up.disabled = true;
     for (let i = 0; i < items; i++) {
       let x = getRandomParameter(width, 0);
       let y = getRandomParameter(-1000, -500);
