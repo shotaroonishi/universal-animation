@@ -136,7 +136,9 @@ html {
 
 .up__wrap {
   position: relative;
+  touch-action: manipulation;
   .up__cover {
+    touch-action: manipulation;
     display: none;
     bottom: 0;
     left: 0;

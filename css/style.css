@@ -203,8 +203,12 @@ html {
 
 .up__wrap {
   position: relative;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 .up__wrap .up__cover {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   display: none;
   bottom: 0;
   left: 0;
